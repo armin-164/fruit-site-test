@@ -7,21 +7,21 @@ body {
 /* HEADER STYLING */
 
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(90, 240, 90);
-    text-align: center;
-    height: 10vh;
-    width: 100vw;
-  }
-  
-  h1 {
-    font-size: clamp(2rem, 3vw, 4rem);
-    font-family: 'Gluten', sans-serif;
-    color: #f7f2e0;
-    text-transform: uppercase;
-    text-shadow: 0.025em 0.075em 0 #ffb650, 0.05em 0.1em 0 #ffd662,
-      0.075em 0.125em 0 #ff80bf, 0.1em 0.15em 0 #ef5097, 0.125em 0.175em 0 #6868ac,
-      0.15em 0.2em 0 #90b1e0;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(90, 240, 90);
+  text-align: center;
+  height: 10vh;
+  width: 100vw;
+}
+
+h1 {
+  font-size: clamp(2rem, 3vw, 4rem);
+  font-family: 'Gluten', sans-serif;
+  color: #f7f2e0;
+  text-transform: uppercase;
+  text-shadow: 0.025em 0.075em 0 #ffb650, 0.05em 0.1em 0 #ffd662,
+    0.075em 0.125em 0 #ff80bf, 0.1em 0.15em 0 #ef5097, 0.125em 0.175em 0 #6868ac,
+    0.15em 0.2em 0 #90b1e0;
+}
