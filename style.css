@@ -43,6 +43,7 @@ h1 {
 .fruit-card {
   box-shadow: 2px 0 0.5rem lightgrey;
   border-radius: 0.75rem;
+  min-width: 300px;
   width: clamp(25rem, 30vw, 50rem);
   position: relative;
 }
@@ -68,7 +69,6 @@ h1 {
 .fruit-card-top > button {
   font-family: 'Hubbali', sans-serif;
   font-weight: 700;
-  width: clamp(8rem, 9vw, 10rem);
   font-size: clamp(0.5rem, 4vw, 1.5rem);
   color: rgb(236, 58, 72);
   margin: 1rem;
