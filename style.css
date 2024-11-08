@@ -139,3 +139,40 @@ h1 {
     width: 100vw;
   }
 }
+
+/* Footer Styling */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0 2rem;
+    background-color: rgb(236,58,72);
+    height: 15vh;
+}
+
+footer > h2 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-family: 'Gluten', sans-serif;
+    color: #f7f2e0;
+    text-transform: uppercase;
+    text-shadow: 0.025em 0.075em 0 #ffb650, 0.05em 0.1em 0 #ffd662,
+      0.075em 0.125em 0 #ff80bf, 0.1em 0.15em 0 #ef5097, 0.125em 0.175em 0 #6868ac,
+      0.15em 0.2em 0 #90b1e0;
+}
+
+.links > a {
+    text-decoration: none;
+    color: white;
+    font-family: "Hubbali", sans-serif;
+    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+    padding: 0 clamp(0.5rem, 2vw, 2rem);
+}
+
+
+.links > a:nth-child(2) {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+
+}
