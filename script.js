@@ -2,39 +2,41 @@
 (function () {
   fetch('./data/fruits.json')
     .then((response) => response.json())
-    .then((data) => {
-      displayAllFruits(data.fruits);
-    })
+    .then((data) => displayAllFruits(data.fruits))
     .catch((error) => console.error('Error message:', error));
 })();
 
+// A function that creates an element with a class
+function createElementWithClass(type, className) {
+  const element = document.createElement(type);
+  if (className) element.classList.add(className);
+  return element;
+}
 
 // This function aims to display all fruits in main content
-function displayAllFruits(arr) {
+function displayAllFruits(fruits) {
   const mainContent = document.querySelector('.main-content');
   mainContent.innerHTML = "";
 
-  const fruitListContainer = document.createElement('div');
-  fruitListContainer.classList.add('fruit-list');
+  const fruitListContainer = createElementWithClass('div', 'fruit-list');
 
-  arr.forEach((fruit) => {
-    const fruitCard = document.createElement('div');
-    fruitCard.classList.add('fruit-card');
+  fruits.forEach(fruit => {
+    const fruitCard = createElementWithClass('div', 'fruit-card');
+    const fruitCardTop = createElementWithClass('div', 'fruit-card-top');
+    const fruitName = createElementWithClass('h3', 'fruit-name');
+    fruitName.textContent = fruit.name;
 
-    fruitCard.innerHTML = `
-    <div class="fruit-card-top">
-        <h3 class="fruit-name">${fruit.name}</h3>
-        <button class="read-more-btn">Read more</button>
-    </div>
+    const readMoreBtn = createElementWithClass('button', 'read-more-btn');
+    readMoreBtn.textContent = 'Read more';
+    readMoreBtn.addEventListener('click', () => displaySpecificFruit(fruit));
 
-    <img src="${fruit.imageSrc}" alt="${fruit.altDesc}">
-    `;
+    fruitCardTop.append(fruitName, readMoreBtn);
 
-    const readMoreBtn = fruitCard.querySelector(".read-more-btn");
-    readMoreBtn.addEventListener("click", function() {
-        displaySpecificFruit(fruit); 
-    });
+    const fruitImage = createElementWithClass('img');
+    fruitImage.src = fruit.imageSrc;
+    fruitImage.alt = fruit.altDesc;
 
+    fruitCard.append(fruitCardTop, fruitImage);
     fruitListContainer.appendChild(fruitCard);
   });
 
@@ -48,23 +50,31 @@ function displaySpecificFruit(fruit) {
   const mainContent = document.querySelector('.main-content');
   mainContent.innerHTML = '';
 
-  const fruitContainer = document.createElement('div');
-  fruitContainer.classList.add('fruit-container');
+  const fruitContainer = createElementWithClass('div', 'fruit-container');
+  const imageContainer = createElementWithClass('div', 'image-container');
+  const img = createElementWithClass('img');
+  img.src = fruit.imageSrc;
+  img.alt = fruit.altDesc;
+  imageContainer.appendChild(img);
 
-  fruitContainer.innerHTML = `
-    <div class="image-container">
-            <img src="${fruit.imageSrc}" alt="${fruit.altDesc}">
-    </div>
-    <div class="fruit-info">
-        <div class="info-top">
-            <h3 class="fruit-name">${fruit.name}</h3>
-            <a href="/">Go Back</a>
-        </div>
-        <div class="info-bottom">
-            <p class="fruit-description">${fruit.description}</p>
-        </div>
-    </div>
-    `;
+  const fruitInfo = createElementWithClass('div', 'fruit-info');
+  const infoTop = createElementWithClass('div', 'info-top');
+  const fruitName = createElementWithClass('h3', 'fruit-name');
+  fruitName.textContent = fruit.name;
 
-    mainContent.appendChild(fruitContainer);
+  const goBackLink = createElementWithClass('a');
+  goBackLink.href = '/';
+  goBackLink.textContent = 'Go Back';
+
+  infoTop.append(fruitName, goBackLink);
+
+  const infoBottom = createElementWithClass('div', 'info-bottom');
+  const fruitDescription = createElementWithClass('p', 'fruit-description');
+  fruitDescription.textContent = fruit.description;
+
+  infoBottom.append(fruitDescription);
+  fruitInfo.append(infoTop, infoBottom);
+
+  fruitContainer.append(imageContainer, fruitInfo);
+  mainContent.appendChild(fruitContainer);
 }
