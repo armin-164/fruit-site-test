@@ -80,3 +80,26 @@ h1 {
 .fruit-card-top > button:active {
     box-shadow: 0.1rem -0.1rem 0.2rem black;
 }
+
+
+/* Fruit Container - MAIN CONTAINER */
+
+.fruit-container {
+    border: 1px solid blue;
+    display: flex;
+    flex-direction:row;
+}
+
+.image-container > img {
+    width: 50vw;
+}
+
+@media (max-width: 768px) {
+    .fruit-container {
+        flex-direction: column;
+    }
+
+    .image-container > img{
+        width: 100vw;
+    }
+  }
