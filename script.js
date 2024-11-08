@@ -63,7 +63,7 @@ function displaySpecificFruit(fruit) {
   fruitName.textContent = fruit.name;
 
   const goBackLink = createElementWithClass('a');
-  goBackLink.href = '/';
+  goBackLink.href = './';
   goBackLink.textContent = 'Go Back';
 
   infoTop.append(fruitName, goBackLink);
