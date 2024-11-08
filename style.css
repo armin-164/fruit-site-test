@@ -25,3 +25,24 @@ h1 {
     0.075em 0.125em 0 #ff80bf, 0.1em 0.15em 0 #ef5097, 0.125em 0.175em 0 #6868ac,
     0.15em 0.2em 0 #90b1e0;
 }
+
+
+/* Fruit List - MAIN CONTENT */
+
+.fruit-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5rem;
+    gap: 2rem;
+}
+
+.fruit-card {
+    border: 1px solid blue;
+    width: clamp(25rem, 30vw, 50rem);
+}
+
+.fruit-card > img {
+    width: 100%;
+}
+
