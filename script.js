@@ -21,8 +21,13 @@ function displayAllFruits(arr) {
     fruitCard.innerHTML = `
     <h2 class="fruit-name">${fruit.name}</h2>
     <img src="${fruit.imageSrc}" alt="${fruit.altDesc}">
-    <button>Read more</button>
+    <button class="read-more-btn">Read more</button>
     `;
+
+    const readMoreBtn = fruitCard.querySelector(".read-more-btn");
+    readMoreBtn.addEventListener("click", function() {
+        displaySpecificFruit(fruit); 
+    });
 
     fruitListContainer.appendChild(fruitCard);
   });
