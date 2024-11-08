@@ -21,7 +21,7 @@ function displayAllFruits(fruits) {
   const fruitListContainer = createElementWithClass('div', 'fruit-list');
 
   fruits.forEach(fruit => {
-    const fruitCard = createElementWithClass('div', 'fruit-card');
+    const fruitCard = createElementWithClass('article', 'fruit-card');
     const fruitCardTop = createElementWithClass('div', 'fruit-card-top');
     const fruitName = createElementWithClass('h3', 'fruit-name');
     fruitName.textContent = fruit.name;
@@ -50,14 +50,14 @@ function displaySpecificFruit(fruit) {
   const mainContent = document.querySelector('.main-content');
   mainContent.innerHTML = '';
 
-  const fruitContainer = createElementWithClass('div', 'fruit-container');
+  const fruitContainer = createElementWithClass('section', 'fruit-container');
   const imageContainer = createElementWithClass('div', 'image-container');
   const img = createElementWithClass('img');
   img.src = fruit.imageSrc;
   img.alt = fruit.altDesc;
   imageContainer.appendChild(img);
 
-  const fruitInfo = createElementWithClass('div', 'fruit-info');
+  const fruitInfo = createElementWithClass('article', 'fruit-info');
   const infoTop = createElementWithClass('div', 'info-top');
   const fruitName = createElementWithClass('h3', 'fruit-name');
   fruitName.textContent = fruit.name;
