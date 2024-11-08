@@ -38,11 +38,38 @@ h1 {
 }
 
 .fruit-card {
-    border: 1px solid blue;
+    box-shadow: 2px 0 0.5rem lightgrey;
+    border-radius: 0.75rem;
     width: clamp(25rem, 30vw, 50rem);
+    padding: 2rem;
+    text-align: center;
+}
+
+.fruit-card > h2 {
+    font-family: "Gluten", sans-serif;
+    font-size: clamp(2rem, 7vw, 4rem);
+    color: rgb(180, 211, 70);
+    margin: 1rem 0;
 }
 
 .fruit-card > img {
     width: 100%;
 }
 
+.fruit-card > button {
+    font-family: "Gluten", sans-serif;
+    font-size: clamp(1rem, 4vw, 2rem);
+    color: rgb(230, 248, 222);
+    margin: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: rgb(90, 240, 90);
+    border: none;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    box-shadow: 0.05rem 0 0.2rem black;
+    text-transform: uppercase;
+}
+
+.fruit-card > button:active {
+    box-shadow: 0.1rem -0.05rem 0.2rem black;
+}
