@@ -107,7 +107,8 @@ h1 {
     color: rgb(236,58,72);
 }
 
-.info-top > button {
+.info-top > a {
+    text-decoration: none;
     font-family: "Hubbali", sans-serif;
     font-weight: 700;
     font-size: clamp(1rem, 1.4vw, 1.5rem);
