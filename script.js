@@ -58,7 +58,7 @@ function displaySpecificFruit(fruit) {
     <div class="fruit-info">
         <div class="info-top">
             <h2 class="fruit-name">${fruit.name}</h2>
-            <button>Go Back</button>
+            <a href="/">Go Back</a>
         </div>
         <div class="info-bottom">
             <p class="fruit-description">${fruit.description}</p>
