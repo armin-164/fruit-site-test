@@ -50,7 +50,7 @@ h1 {
     justify-content: space-between;
 }
 
-.fruit-card-top > h2 {
+.fruit-card-top > h3 {
     font-family: "Hubballi", sans-serif;
     font-size: clamp(2rem, 7vw, 3rem);
     color: rgb(255, 255, 255);
@@ -99,7 +99,7 @@ h1 {
     justify-content: space-between;
 }
 
-.info-top > h2 {
+.info-top > h3 {
     margin: 0;
     font-family: "Hubbali", sans-serif;
     font-size: clamp(2.5rem, 3rem, 2vw);
