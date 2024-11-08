@@ -90,6 +90,24 @@ h1 {
     flex-direction:row;
 }
 
+.fruit-info {
+    padding: 1rem 2rem;
+}
+
+.info-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-top > h2 {
+    margin: 0;
+    font-family: "Hubbali", sans-serif;
+    font-size: clamp(2.5rem, 3rem, 2vw);
+    font-weight: 900;
+    color: rgb(236,58,72);
+
+}
+
 .image-container > img {
     width: 50vw;
 }
