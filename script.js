@@ -56,11 +56,11 @@ function displaySpecificFruit(fruit) {
             <img src="${fruit.imageSrc}" alt="${fruit.altDesc}">
     </div>
     <div class="fruit-info">
-        <div class="info-top>
+        <div class="info-top">
             <h2 class="fruit-name">${fruit.name}</h2>
             <button>Go Back</button>
         </div>
-        <div class="info-bottom>
+        <div class="info-bottom">
             <p class="fruit-description">${fruit.description}</p>
         </div>
     </div>
