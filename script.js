@@ -1,3 +1,4 @@
+// This IIFE will fetch the fruits and display all of them immediately
 (function () {
   fetch('./data/fruits.json')
     .then((response) => response.json())
@@ -7,6 +8,8 @@
     .catch((error) => console.error('Error message:', error));
 })();
 
+
+// This function aims to display all fruits in main content
 function displayAllFruits(arr) {
   const mainContent = document.querySelector('.main-content');
   mainContent.innerHTML = "";
@@ -35,6 +38,9 @@ function displayAllFruits(arr) {
   mainContent.appendChild(fruitListContainer);
 }
 
+
+// This function will display a specific fruit and make use of the fruits obj
+// that is passed along as an arg
 function displaySpecificFruit(fruit) {
   const mainContent = document.querySelector('.main-content');
   mainContent.innerHTML = '';
