@@ -87,7 +87,6 @@ h1 {
 /* Fruit Container - MAIN CONTAINER */
 
 .fruit-container {
-  border: 1px solid blue;
   display: flex;
   flex-direction: row;
 }
@@ -127,6 +126,7 @@ h1 {
 
 .image-container > img {
   width: 50vw;
+  padding: 2rem 0 0 2rem;
 }
 
 .fruit-description {
@@ -141,6 +141,7 @@ h1 {
 
   .image-container > img {
     width: 100vw;
+    padding: 0;
   }
 }
 
