@@ -23,7 +23,7 @@ function displayAllFruits(arr) {
 
     fruitCard.innerHTML = `
     <div class="fruit-card-top">
-        <h2 class="fruit-name">${fruit.name}</h2>
+        <h3 class="fruit-name">${fruit.name}</h3>
         <button class="read-more-btn">Read more</button>
     </div>
 
@@ -57,7 +57,7 @@ function displaySpecificFruit(fruit) {
     </div>
     <div class="fruit-info">
         <div class="info-top">
-            <h2 class="fruit-name">${fruit.name}</h2>
+            <h3 class="fruit-name">${fruit.name}</h3>
             <a href="/">Go Back</a>
         </div>
         <div class="info-bottom">
