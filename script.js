@@ -22,9 +22,12 @@ function displayAllFruits(arr) {
     fruitCard.classList.add('fruit-card');
 
     fruitCard.innerHTML = `
-    <h2 class="fruit-name">${fruit.name}</h2>
+    <div class="fruit-card-top">
+        <h2 class="fruit-name">${fruit.name}</h2>
+        <button class="read-more-btn">Read more</button>
+    </div>
+
     <img src="${fruit.imageSrc}" alt="${fruit.altDesc}">
-    <button class="read-more-btn">Read more</button>
     `;
 
     const readMoreBtn = fruitCard.querySelector(".read-more-btn");
