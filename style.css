@@ -126,6 +126,11 @@ h1 {
     width: 50vw;
 }
 
+.fruit-description {
+    font-family: "Hubbali", sans-serif;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
 @media (max-width: 768px) {
     .fruit-container {
         flex-direction: column;
