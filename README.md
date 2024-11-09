@@ -16,6 +16,8 @@ This project is a simple fruit archive website that showcases a list of fruits o
 - **JavaScript**: Used to dynamically fetch and display data from the `fruits.json` file.
 - **fruits.json**: A local JSON file that contains the data for each fruit.
 
+## Live Repo
+https://armin-164.github.io/fruit-site-test/
 
 ### Author
 @armin-164
